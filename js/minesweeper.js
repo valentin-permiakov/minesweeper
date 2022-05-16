@@ -8,9 +8,9 @@ let squares = [];
 let isGameOver = false;
 let width, bombAmount;
 
-const boom = new Audio('https://valentin-permiakov.github.io/minesweeper/assets/boom.mp3');
-const clickBtn = new Audio('https://valentin-permiakov.github.io/minesweeper/click.mp3');
-const winSound = new Audio('https://valentin-permiakov.github.io/minesweeper/win.mp3');
+const boom = new Audio('../minesweeper/assets/boom.mp3');
+const clickBtn = new Audio('../minesweeper/assets/click.mp3');
+const winSound = new Audio('../minesweeper/assets/win.mp3');
 
 function createSettings() {
     // resetting everything
