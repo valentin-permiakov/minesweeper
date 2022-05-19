@@ -1,0 +1,96 @@
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.settings-wrapper {
+    margin: 0 auto;
+    padding-bottom: 50px;
+    width: 700px;
+    border: 1px solid #333;
+}
+
+.settings-hint {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 300px;
+    text-align: center;
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    margin: 0 auto; 
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.settings-button {
+    padding: 10px;
+    width: 120px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.map-size-button {
+    background-color: #d0dff5;
+    transition: background-color .2s ease-in-out, transform .2s ease-in-out;
+}
+
+.map-size-button:hover {
+    background-color: #d0f5e6;
+    transition: background-color .2s ease-in-out;
+}
+
+.map-size-button:disabled:hover {
+    background-color: #d0dff5;
+    cursor: default;
+}
+
+.map-size-button:not(:last-child) {
+    margin-right: 10px;
+}
+
+.map-size-button--active {
+    background-color: #d0f5e6;
+    transform: scale(.95);
+    transition: background-color .2s ease-in-out, transform .2s ease-in-out;
+}
+
+.map-size-button--active:hover {
+    background-color: #d0f5e6 !important;
+}
+
+.settings-input {
+    margin-bottom: 15px;
+    width: 400px;
+    height: 40px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #f5e6d0;
+}
+
+.start-game-button {
+    background-color: #d0f5e6;
+    transition: background-color .2s ease-in-out, transform .2s ease-in-out;
+}
+
+.start-game-button:hover {
+    background-color: #98c7b4;
+    transition: background-color .2s ease-in-out, transform .2s ease-in-out;
+}
+
+.start-game-button:active {
+    transition: background-color .2s ease-in-out, transform .2s ease-in-out;
+    transform: scale(.95);
+}
