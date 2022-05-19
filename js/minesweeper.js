@@ -53,10 +53,9 @@ function createSettings() {
     mapSizeBtnSm.textContent = 'Small Map';
     mapSizeBtnMd.textContent = 'Medium Map';
     mapSizeBtnLg.textContent = 'Large Map';
-    bombInput.placeholder = 'Choose the amount of bombs';
     bombInput.type = 'number';
     startBtn.textContent = 'Start Game';
-
+    bombInput.placeholder = 'Choose the amount of bombs';
     document.body.append(heading, gameSettingsWrapper);
     gameSettingsWrapper.append(settingsHeading, hint, form);
     buttonWrapper.append(mapSizeBtnSm, mapSizeBtnMd, mapSizeBtnLg);
@@ -71,18 +70,21 @@ function createSettings() {
             buttonWrapper.style.backgroundColor = '#f5e6d0';
             if (e.target.id === 'small') {
                 width = 10;
+                bombInput.placeholder = 'Choose the amount of bombs below 80';
                 mapSizeBtnSm.classList.add('map-size-button--active');
                 mapSizeBtnMd.classList.remove('map-size-button--active');
                 mapSizeBtnLg.classList.remove('map-size-button--active');
             }
             if (e.target.id === 'medium') {
                 width = 15;
+                bombInput.placeholder = 'Choose the amount of bombs below 200';
                 mapSizeBtnSm.classList.remove('map-size-button--active');
                 mapSizeBtnMd.classList.add('map-size-button--active');
                 mapSizeBtnLg.classList.remove('map-size-button--active');
             }
             if (e.target.id === 'large') {
                 width = 20;
+                bombInput.placeholder = 'Choose the amount of bombs below 380';
                 mapSizeBtnSm.classList.remove('map-size-button--active');
                 mapSizeBtnMd.classList.remove('map-size-button--active');
                 mapSizeBtnLg.classList.add('map-size-button--active');
@@ -100,6 +102,12 @@ function createSettings() {
         if (!bombInput.value) {
             bombInput.style.backgroundColor = '#f5d0df';
             alert('Choose the amount of bombs to be placed');
+            return;
+        }
+
+        if (width === 10 && bombInput.value > 80 || width === 15 && bombInput.value > 200 || width === 10 && bombInput.value > 380) {
+            bombInput.style.backgroundColor = '#f5d0df';
+            alert('Too many bombs!');
             return;
         }
 
