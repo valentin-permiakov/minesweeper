@@ -100,7 +100,7 @@ function createSettings() {
     form.addEventListener('submit', e => {
         e.preventDefault();
 
-        if (!bombInput.value) {
+        if (!bombInput.value || bombInput.value === 0) {
             bombInput.style.backgroundColor = '#f5d0df';
             alert('Choose the amount of bombs to be placed');
             return;
